@@ -92,4 +92,4 @@ Inside each block, you must add an `instruction` for the next block that should 
 
 ## Contacts
 
-We would love to know if you are using PAPermissions in your app, send an email to <pasquale.ambrosini@gmail.com>
+We would love to know if you are using `Me` in your app, send an email to <pasquale.ambrosini@gmail.com>
