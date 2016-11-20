@@ -75,7 +75,7 @@ Inside each block, you must add an `instruction` for the next block that should 
 **N.B. If you don't call end(), nothing will be released**
 
 
-## Pro
+## Pros
 
 - Easy to read
 - Easy to maintain
@@ -88,7 +88,7 @@ Inside each block, you must add an `instruction` for the next block that should 
 
 - The code will be few lines longer (2/3 for each block) compared to the nested code
 - You can't forget to add `runNext()` or `end()` at the end of the execution, otherwise the next block will not be executed or the memory will not be released
-- You can't pass paramerers directly as block parameters, but you must specify them into the `parameters` dictionary
+- You can't pass parameters directly as block parameters, but you must specify them into the `parameters` dictionary
 
 ## Contacts
 
