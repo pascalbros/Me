@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 	}
 	
 	private func doIt() {
-		Me.start { (me) -> (Void) in
+		Me.start { (me) in
 			
 			let url = URL(string: "http://www.stackoverflow.com")
 			let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 			}
 			
 			task.resume()
-		}.next { (caller, me) -> (Void) in
+		}.next { (caller, me) in
 			guard let response = caller!.parameters["response"] as! String? else {
 				me.parameters["error"] = MyError.response
 				me.jump(toName: "errors")
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
 			}
 			print("Response received. Length: \(response.characters.count)")
 			me.end()
-		}.next (name: "errors") { (caller, me) -> (Void) in
+		}.next (name: "errors") { (caller, me) in
 			let error = caller!.parameters["error"] as! MyError
 			print("Error received. \(error.localizedDescription)")
 			me.end()

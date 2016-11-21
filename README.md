@@ -28,22 +28,22 @@ MyAPI.login {
 ### Me method
 
 ```
-Me.start { (me) -> (Void) in
+Me.start { (me) in
 	MyAPI.login {
 		//Do your stuff and then request posts...
 		me.runNext()
 	}
-}.next { (caller, me) -> (Void) in
+}.next { (caller, me) in
 	MyAPI.posts {
 		//Do your stuff and then request comments...
 		me.runNext()
 	}
-}.next { (caller, me) -> (Void) in
+}.next { (caller, me) in
 	MyAPI.comments {
 		//Do your stuff and then request likes...
 		me.runNext()
 	}
-}.next { (caller, me) -> (Void) in
+}.next { (caller, me) in
 	MyAPI.likes {
 		//We are done here
 		me.end()

@@ -8,8 +8,8 @@
 
 import Foundation
 
-public typealias MeInitClosure = ((_ current: Me) -> (Void))
-public typealias MeClosure = ((_ previous: Me?, _ current: Me) -> (Void))
+public typealias MeInitClosure = ((_ current: Me) -> ())
+public typealias MeClosure = ((_ previous: Me?, _ current: Me) -> ())
 
 public class Me: NSObject {
 	
