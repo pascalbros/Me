@@ -10,7 +10,7 @@ In order to deal with it, we wrote **Me**, a super slim piece of software (less 
 
 ### Old method
 
-```
+``` swift
 MyAPI.login {
 	//Do your stuff and then request posts...
 	MyAPI.posts {
@@ -27,7 +27,7 @@ MyAPI.login {
 
 ### Me method
 
-```
+``` swift
 Me.start { (me) in
 	MyAPI.login {
 		//Do your stuff and then request posts...
