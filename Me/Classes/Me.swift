@@ -1,6 +1,6 @@
 //
 //  Me.swift
-//  Test1
+//  Me
 //
 //  Created by Pasquale Ambrosini on 20/11/16.
 //  Copyright © 2016 Pasquale Ambrosini. All rights reserved.
@@ -11,7 +11,7 @@ import Foundation
 public typealias MeInitClosure = ((_ current: Me) -> ())
 public typealias MeClosure = ((_ previous: Me?, _ current: Me) -> ())
 
-public class Me: NSObject {
+public class Me {
 	
 	private var this: MeClosure!
 	private var next: MeClosure?
@@ -40,7 +40,6 @@ public class Me: NSObject {
 	public var parameters: [String: Any] = [:]
 	
 	private init(name: String = "", index: UInt, this: @escaping MeClosure) {
-		super.init()
 		self.this = this
 		self._index = index
 		if name == "" {
